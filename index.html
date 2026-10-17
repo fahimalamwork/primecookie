@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Cookie — small-batch cookies & bakes</title>
+    <meta name="description" content="Prime Cookie (say it “pree-may”) — small-batch cookies, cinnamon rolls, banana bread and pound cake, baked fresh." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+
+    <header class="nav">
+      <a href="#top" class="logo" aria-label="Prime Cookie home">
+        <span class="logo-prime">Prime</span>
+        <span class="logo-cookie">C<span class="logo-o" aria-hidden="true"></span><span class="sr-only">o</span>okie</span>
+      </a>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#order" class="btn btn-small">Order</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Small-batch bakery · Coming soon</p>
+          <h1 class="reveal">
+            Cookies worth<br />
+            <em>saying right.</em>
+          </h1>
+          <button class="say-it reveal" id="sayIt" type="button" aria-label="Hear how to say Prime">
+            <span class="say-word">Prime</span>
+            <span class="say-arrow">→</span>
+            <span class="say-phon">/pree·may/</span>
+            <span class="say-icon" aria-hidden="true">🔊</span>
+          </button>
+          <p class="lede reveal">
+            Brown-butter cookies, gooey cinnamon rolls, banana bread and pound cake —
+            baked in tiny batches by one very serious baker.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#order" class="btn">Join the first batch</a>
+            <a href="#menu" class="btn btn-ghost">See the menu</a>
+          </div>
+        </div>
+        <p class="hint" aria-hidden="true">psst — click the cookie 🍪</p>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Brown butter</span><i>✦</i><span>Flaky sea salt</span><i>✦</i><span>Baked this morning</span><i>✦</i>
+          <span>Say it pree-may</span><i>✦</i><span>Gooey centers</span><i>✦</i><span>Crispy edges</span><i>✦</i>
+          <span>Brown butter</span><i>✦</i><span>Flaky sea salt</span><i>✦</i><span>Baked this morning</span><i>✦</i>
+          <span>Say it pree-may</span><i>✦</i><span>Gooey centers</span><i>✦</i><span>Crispy edges</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- MENU -->
+      <section class="section menu" id="menu">
+        <div class="section-head reveal">
+          <p class="eyebrow">The menu</p>
+          <h2>Fresh out of the <em>oven</em></h2>
+        </div>
+
+        <div class="cards">
+          <article class="card tilt reveal" style="--tone: #e9b872">
+            <div class="card-media">
+              <img src="images/menu-classic.jpg" alt="Brown butter chocolate chip cookie" loading="lazy" onerror="this.remove()" />
+              <span class="card-badge">Signature</span>
+            </div>
+            <div class="card-body">
+              <h3>The Prime</h3>
+              <p>Brown butter, two chocolates, flaky salt. The one that started it all.</p>
+            </div>
+          </article>
+
+          <article class="card tilt reveal" style="--tone: #c98a5a">
+            <div class="card-media">
+              <img src="images/menu-cinnamon-roll.jpg" alt="Cinnamon roll with cream cheese icing" loading="lazy" onerror="this.remove()" />
+              <span class="card-badge">Weekends</span>
+            </div>
+            <div class="card-body">
+              <h3>Swirl Royale</h3>
+              <p>Pillowy cinnamon rolls under a thick blanket of cream-cheese icing.</p>
+            </div>
+          </article>
+
+          <article class="card tilt reveal" style="--tone: #d7a35b">
+            <div class="card-media">
+              <img src="images/menu-banana-bread.jpg" alt="Sliced banana bread loaf" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Bananas Foster Loaf</h3>
+              <p>Caramelized banana bread with a crackly brown-sugar top.</p>
+            </div>
+          </article>
+
+          <article class="card tilt reveal" style="--tone: #f0d08a">
+            <div class="card-media">
+              <img src="images/menu-pound-cake.jpg" alt="Golden pound cake slice" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card-body">
+              <h3>Golden Hour Pound Cake</h3>
+              <p>Dense, buttery, vanilla-bean — the slice your grandma would approve.</p>
+            </div>
+          </article>
+        </div>
+
+        <ul class="flavors reveal" aria-label="Rotating cookie flavors">
+          <li>Double Chocolate Prime</li>
+          <li>Salted Toffee Crunch</li>
+          <li>Snickerdoodle Supreme</li>
+          <li>Oatmeal Brûlée</li>
+          <li>Red Velvet Cheesecake</li>
+          <li>Matcha White Chocolate</li>
+        </ul>
+      </section>
+
+      <!-- STORY -->
+      <section class="section story" id="story">
+        <div class="story-media reveal">
+          <video id="storyVideo" autoplay muted loop playsinline poster="images/story-baker.jpg" preload="none">
+            <source src="video/story.mp4" type="video/mp4" />
+          </video>
+          <img src="images/story-baker.jpg" alt="Hands shaping cookie dough" loading="lazy" onerror="this.remove()" />
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow reveal">Our story</p>
+          <h2 class="reveal">From one kitchen to <em>your</em> sweet tooth.</h2>
+          <p class="reveal">
+            Prime Cookie started the way the best bakeries do: friends asking for “just one more batch.”
+            Every cookie is portioned by hand, rested overnight for deeper flavor, and baked until the
+            edges crackle and the middle stays soft.
+          </p>
+          <p class="reveal">
+            <strong>Why “Pree-may”?</strong> In French, <em>primé</em> means <em>award-winning</em>.
+            We think every cookie should earn the title.
+          </p>
+          <div class="stats reveal">
+            <div><b>48h</b><span>dough rest</span></div>
+            <div><b>100%</b><span>real butter</span></div>
+            <div><b>0</b><span>shortcuts</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORDER / WAITLIST -->
+      <section class="section order" id="order">
+        <div class="order-card reveal">
+          <p class="eyebrow">Be first in line</p>
+          <h2>Get on the <em>first batch</em> list.</h2>
+          <p>Launch dates, pop-ups and pre-orders — straight to your inbox. No spam, only crumbs.</p>
+          <form name="waitlist" id="waitlist">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            <select name="favorite" aria-label="What are you most excited for?">
+              <option value="cookies">🍪 Cookies</option>
+              <option value="cinnamon-rolls">🌀 Cinnamon rolls</option>
+              <option value="banana-bread">🍌 Banana bread</option>
+              <option value="pound-cake">🍰 Pound cake</option>
+            </select>
+            <button class="btn" type="submit">Count me in</button>
+          </form>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logo">Prime Cookie</div>
+      <p>Say it <em>pree-may</em>. Eat it immediately.</p>
+      <p class="small">© <span id="year"></span> Prime Cookie · Baked with love &amp; a lot of butter</p>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
