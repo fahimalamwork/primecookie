@@ -81,6 +81,22 @@ if (finePointer) document.querySelectorAll(".tilt").forEach((card) => {
   card.addEventListener("pointerleave", () => (card.style.transform = ""));
 });
 
+// Flavor chips: tap to toggle the preview on touch screens (hover/focus handles desktop)
+const flavorChips = document.querySelectorAll(".flavors li");
+flavorChips.forEach((li) =>
+  li.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const wasOpen = li.classList.contains("open");
+    flavorChips.forEach((x) => x.classList.remove("open"));
+    li.classList.toggle("open", !wasOpen);
+    document.body.classList.toggle("flavor-open", !wasOpen); // the cookie banner steps aside on phones
+  }),
+);
+document.addEventListener("click", () => {
+  flavorChips.forEach((x) => x.classList.remove("open"));
+  document.body.classList.remove("flavor-open");
+});
+
 // "Say it" pronunciation button
 const sayIt = document.getElementById("sayIt");
 sayIt.addEventListener("click", () => {

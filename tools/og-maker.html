@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Preview Maker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body { margin: 0; padding: 32px 16px; background: #f7efe3; color: #2e1b12; font-family: "DM Sans", system-ui, sans-serif; }
+      main { max-width: 900px; margin: 0 auto; }
+      h1 { font-family: Fraunces, serif; margin: 0 0 8px; }
+      canvas { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 50px -30px rgba(46, 27, 18, 0.6); background: #efe2cf; }
+      .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0; }
+      button, label.file { padding: 12px 22px; border-radius: 999px; border: 0; background: #2e1b12; color: #f7efe3; font: 600 1rem "DM Sans", sans-serif; cursor: pointer; }
+      input[type="file"] { display: none; }
+      input[type="text"] { flex: 1 1 260px; padding: 12px 18px; border-radius: 999px; border: 2px solid #2e1b12; font: 500 1rem "DM Sans", sans-serif; background: #fffaf2; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Link preview maker</h1>
+      <p>
+        Pick your Nano Banana photo (1200×630, with empty space on the left). This adds the real
+        “Primé Cookie” lettering, since AI images usually misspell text. Then download it and save it as
+        <code>public/images/og-image.jpg</code>.
+      </p>
+      <div class="row">
+        <label class="file">Choose photo<input type="file" id="file" accept="image/*" /></label>
+        <input type="text" id="tagline" value="Cookies worth saying right." aria-label="Tagline" />
+        <button id="download" type="button">Download og-image.jpg</button>
+      </div>
+      <canvas id="c" width="1200" height="630"></canvas>
+    </main>
+    <script>
+      const c = document.getElementById("c");
+      const ctx = c.getContext("2d");
+      const tagline = document.getElementById("tagline");
+      let photo = null;
+
+      function draw() {
+        ctx.fillStyle = "#F7EFE3";
+        ctx.fillRect(0, 0, c.width, c.height);
+        if (photo) {
+          // cover-fit the photo into 1200×630
+          const s = Math.max(c.width / photo.width, c.height / photo.height);
+          const w = photo.width * s;
+          const h = photo.height * s;
+          ctx.drawImage(photo, (c.width - w) / 2, (c.height - h) / 2, w, h);
+        }
+        ctx.fillStyle = "#C9803F";
+        ctx.font = "italic 800 110px Fraunces";
+        ctx.fillText("Primé", 72, 260);
+        ctx.fillStyle = "#2E1B12";
+        ctx.font = "800 110px Fraunces";
+        ctx.fillText("Cookie", 72, 370);
+        ctx.font = "500 34px 'DM Sans'";
+        ctx.fillStyle = "#5A3A28";
+        ctx.fillText(tagline.value, 76, 440);
+        ctx.font = "italic 500 28px Fraunces";
+        ctx.fillText("/pree·may/", 76, 495);
+      }
+
+      document.getElementById("file").addEventListener("change", (e) => {
+        const f = e.target.files[0];
+        if (!f) return;
+        const img = new Image();
+        img.onload = () => {
+          photo = img;
+          draw();
+        };
+        img.src = URL.createObjectURL(f);
+      });
+      tagline.addEventListener("input", draw);
+      document.getElementById("download").addEventListener("click", () => {
+        const a = document.createElement("a");
+        a.download = "og-image.jpg";
+        a.href = c.toDataURL("image/jpeg", 0.9);
+        a.click();
+      });
+      document.fonts.load("800 110px Fraunces").then(draw);
+      draw();
+    </script>
+  </body>
+</html>

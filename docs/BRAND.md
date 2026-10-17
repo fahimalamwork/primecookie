@@ -90,6 +90,40 @@ Save as **`public/images/hero.jpg`**, **1:1 square, at least 1200×1200**. It si
 - If the subject is off-center: *"Recenter the cookie and leave equal empty space on all sides."*
 - Want a cutout instead? Ask for *"the same image on a pure white background,"* remove the background with a free tool (e.g. remove.bg), and save it as `hero.png`. Then change `hero.jpg` to `hero.png` in `index.html` and delete the `mask-image` lines in `.hero-art img` in `src/style.css`.
 
+✅ **Done:** the helmet cookie (Option B) is live as the hero. The original is in `art/originals/hero-helmet-cookie.jpg`; the link preview and phone icon were made from it too.
+
+## 5b. Flavor previews (1:1 square, `public/images/flavor-*.jpg`)
+
+These show when someone hovers over or taps a flavor chip. Use one prompt and swap in [COOKIE]:
+> A single thick bakery-style [COOKIE] photographed from directly above, centered, on a plain seamless cream background (#F7EFE3). Soft warm studio light, gentle shadow, editorial food photography, minimal and chic. Square 1:1. No text.
+
+| File | [COOKIE] |
+|---|---|
+| `flavor-edge-case.jpg` | chocolate chip cookie with extra-wide, deeply caramelized, crispy lace edges and a soft gooey center |
+| `flavor-merge-conflict.jpg` | cookie that is exactly half dark chocolate dough and half vanilla dough, swirled together down the middle |
+| `flavor-hotfix.jpg` | chai-spiced snickerdoodle rolled in cinnamon sugar, with a few cardamom pods and a cinnamon stick beside it |
+| `flavor-ctrl-alt-delicious.jpg` | very dark double-chocolate cookie with a glossy crackled top and molten chocolate chunks |
+| `flavor-breaking-change.jpg` | salted toffee cookie snapped in half, with shards of amber toffee and flaky salt |
+| `flavor-green-build.jpg` | vibrant matcha green cookie studded with white chocolate chunks, a light dusting of matcha powder |
+
+Tip: attach the hero photo and add *"Match the lighting and background color of this image"* so they all look like one set.
+
+## 5c. Founder logic™ card art (1:1, `public/images/logic-*.png`)
+
+> Minimal flat sticker illustration, cocoa brown line art with butter-yellow and caramel accents on a plain cream background (#F7EFE3), witty and chic, clean lines. Square. No text. [SCENE]
+
+| File | [SCENE] |
+|---|---|
+| `logic-helmet.png` | a cookie in a tiny bike helmet confidently diving head-first, little motion lines behind it |
+| `logic-bug.png` | a cute ladybug happily eating a cookie crumb, with a small gold star next to it |
+| `logic-solution.png` | a laptop with a cookie on the screen where a chart would be, and a coffee mug beside it |
+
+## 5d. Link preview & phone icon (optional upgrades)
+
+Both were made from the hero photo, so they're done. If you want dedicated versions:
+- **`og-image.jpg` (1200×630):** *Wide editorial food photo: three thick chocolate chip cookies arranged on the right third of the frame, the front one with a bite missing and a tiny butter-yellow bike helmet resting beside it. Lots of plain empty cream background (#F7EFE3) on the left two-thirds for text. Warm soft studio light, minimal, chic. No text.* Then run it through `tools/og-maker.html` to add the lettering.
+- **`apple-touch-icon.png` (180×180):** *App icon: a single chocolate chip cookie wearing a tiny glossy butter-yellow bike helmet, centered, on a solid cocoa-brown (#2E1B12) background, soft 3D clay render, cute but chic, no text.*
+
 ## 5. Nano Banana image prompts (rest of the site)
 
 Save each image with the **exact filename** shown, into `public/images/`. The site picks them up automatically, and until a file exists the site shows a styled placeholder.
