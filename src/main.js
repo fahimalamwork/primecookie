@@ -7,12 +7,12 @@ import { initScene } from "./scene.js";
 const FORM_ENDPOINT = "";
 const FALLBACK_EMAIL = "hello@primecookie.com";
 
-const NOMS = ["nom!", "crunch!", "mmm…", "one more?", "chomp!", "so good", "pree-may!"];
+const NOMS = ["nom!", "crunch!", "mmm…", "one more?", "chomp!", "test passed ✓", "pree-may!", "LGTM 🍪"];
 
-function nomBubble(x, y, bites) {
+function nomBubble(x, y) {
   const el = document.createElement("span");
   el.className = "nom";
-  el.textContent = bites >= 4 ? "baking another…" : NOMS[Math.floor(Math.random() * NOMS.length)];
+  el.textContent = NOMS[Math.floor(Math.random() * NOMS.length)];
   el.style.left = `${x}px`;
   el.style.top = `${y}px`;
   el.style.setProperty("--rot", `${(Math.random() - 0.5) * 24}deg`);
@@ -21,13 +21,23 @@ function nomBubble(x, y, bites) {
 }
 
 const canvas = document.getElementById("scene");
+let scene;
 try {
-  initScene(canvas, { onNom: nomBubble });
+  scene = initScene(canvas);
 } catch (err) {
   console.warn("WebGL unavailable, skipping 3D scene", err);
   canvas.remove();
-  document.querySelector(".hint")?.remove();
 }
+
+// Hero art: tilt toward the pointer, take a "bite" on click
+const heroArt = document.getElementById("heroArt");
+heroArt.addEventListener("click", (e) => {
+  scene?.burstAt(e.clientX, e.clientY);
+  nomBubble(e.clientX, e.clientY);
+  heroArt.classList.remove("chomp");
+  void heroArt.offsetWidth; // restart the animation
+  heroArt.classList.add("chomp");
+});
 
 // Nav background once scrolled
 const nav = document.querySelector(".nav");
@@ -52,6 +62,15 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
 // 3D tilt on menu cards
 const finePointer = window.matchMedia("(pointer: fine)").matches;
+if (finePointer) {
+  heroArt.addEventListener("pointermove", (e) => {
+    const r = heroArt.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    heroArt.style.transform = `perspective(900px) rotateY(${x * 14}deg) rotateX(${-y * 14}deg)`;
+  });
+  heroArt.addEventListener("pointerleave", () => (heroArt.style.transform = ""));
+}
 if (finePointer) document.querySelectorAll(".tilt").forEach((card) => {
   card.addEventListener("pointermove", (e) => {
     const r = card.getBoundingClientRect();
@@ -99,6 +118,42 @@ form.addEventListener("submit", async (e) => {
   } catch {
     msg.textContent = "Oops — the oven hiccuped. Try again in a sec?";
   }
+});
+
+// "This site uses cookies" banner. Rejecting is, of course, not really an option.
+const consent = document.getElementById("consent");
+const reject = document.getElementById("consentReject");
+const REJECT_LINES = ["Reject", "Are you sure?", "Really?", "Nice try 🍪", "Error 418: I'm a cookie"];
+let rejects = 0;
+let consentSeen = false;
+try {
+  consentSeen = localStorage.getItem("primeConsent") === "yes";
+} catch {}
+// Wait until they've seen the hero: show after some scrolling, or after a while
+if (!consentSeen) {
+  const show = () => {
+    consent.hidden = false;
+    window.removeEventListener("scroll", onFirstScroll);
+    clearTimeout(timer);
+  };
+  const onFirstScroll = () => window.scrollY > window.innerHeight * 0.5 && show();
+  const timer = setTimeout(show, 8000);
+  window.addEventListener("scroll", onFirstScroll, { passive: true });
+}
+
+const dodge = () => {
+  rejects = Math.min(rejects + 1, REJECT_LINES.length - 1);
+  reject.textContent = REJECT_LINES[rejects];
+  reject.style.transform = `translate(${(Math.random() - 0.5) * 60}px, ${-Math.random() * 30}px)`;
+};
+if (finePointer) reject.addEventListener("pointerenter", dodge);
+reject.addEventListener("click", dodge);
+document.getElementById("consentAccept").addEventListener("click", (e) => {
+  try {
+    localStorage.setItem("primeConsent", "yes");
+  } catch {}
+  scene?.burstAt(e.clientX, e.clientY, 30);
+  consent.hidden = true;
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();

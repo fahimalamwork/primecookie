@@ -1,11 +1,11 @@
-# 🍪 Prime Cookie
+# 🍪 Primé Cookie
 
-*Say it "pree-may."* The website for Prime Cookie, a small-batch cookie & bakery business.
+*Say it "pree-may."* The website for Primé Cookie, a small-batch cookie & bakery business.
 
 A static site built with [Vite](https://vite.dev) and [three.js](https://threejs.org):
-- A 3D procedural chocolate-chip cookie in the hero. **Click/tap it to take a bite** (with crumbs!). After four bites a fresh one bakes in.
-- Small cookies float down the page with scroll parallax. Tap them and they pop.
-- A 🔊 "say it" pronunciation button, scroll reveals, tilt cards, a marquee and a waitlist form.
+- A Nano Banana hero image (`public/images/hero.jpg`) that tilts toward the cursor. **Click/tap it to take a bite**, and three.js crumbs burst out.
+- Drifting sugar/crumb particles in the background (three.js).
+- A 🔊 "say it" pronunciation button, "Founder logic™" quotes, a parody cookie-consent banner (good luck clicking Reject), scroll reveals, tilt cards, a marquee and a waitlist form.
 - Mobile-friendly, with support for `prefers-reduced-motion`.
 
 Brand brainstorm + **Nano Banana image prompts & video prompts:** see [`docs/BRAND.md`](docs/BRAND.md).
@@ -24,7 +24,8 @@ Drop files into `public/` with these names (prompts for each are in `docs/BRAND.
 
 | File | Where it shows |
 |---|---|
-| `public/images/menu-classic.jpg` | Menu card: The Prime |
+| `public/images/hero.jpg` | Main hero image (square) |
+| `public/images/menu-classic.jpg` | Menu card: The Primé |
 | `public/images/menu-cinnamon-roll.jpg` | Menu card: Swirl Royale |
 | `public/images/menu-banana-bread.jpg` | Menu card: Bananas Foster Loaf |
 | `public/images/menu-pound-cake.jpg` | Menu card: Golden Hour Pound Cake |

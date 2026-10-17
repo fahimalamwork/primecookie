@@ -1,11 +1,11 @@
-# Prime Cookie — Brand Brainstorm & AI Asset Prompts
+# Primé Cookie — Brand Brainstorm & AI Asset Prompts
 
 ## 1. The name
 
 **Prime Cookie**, said *"pree-may."*
 
 - **The hook:** in French, *primé* means **"award-winning."** So the name is a quiet brag, and it gives her a story to tell.
-- **Think about spelling it "Primé" in the logo.** With the accent, people say it right without being told. The domain and social handles can stay plain `primecookie`.
+- **✅ Decided: it's spelled "Primé" everywhere people see it** (logo, site, packaging). With the accent, people say it right without being told. The domain and social handles stay plain `primecookie` because accents and URLs don't mix.
 - **Use the mispronunciation.** People will say "prime" like Amazon Prime. Make it a running joke rather than fighting it:
   - "It's pree-may. But we'll still sell you cookies if you say it wrong."
   - A "Say it right, get a free cookie" day at launch.
@@ -21,6 +21,22 @@
 | Baked to be primé. | French-café chic |
 | Crispy edges. Soft center. Zero shortcuts. | about the product |
 
+## 1b. The founder's personality is the brand
+
+She's funny, witty and lovable, and she works in tech (QA → solutions engineer). Lean into it; that's what makes a bakery memorable. Already on the site:
+- **Flavor names as tech puns:** *Edge Case* (extra-crispy edges), *Merge Conflict* (half chocolate, half vanilla), *Hotfix* (spicy chai snickerdoodle), *Ctrl + Alt + Delicious*, *Breaking Change*, *Green Build* (matcha)
+- **"QA-tested, every batch" / "Zero known bugs" / "Tested in production"** in the marquee and stats
+- **Founder logic™** quotes, including her helmet theory: *"If you fall off your bike, always aim to land on your head. That's where the helmet is."*
+- **A parody cookie-consent banner:** "This site uses cookies. Obviously." The Reject button runs away.
+- Bite bubbles say things like "LGTM 🍪" and "test passed ✓"
+
+More ideas for later:
+- Box sticker: **"Passed QA ✓"** with her initials, like a code review sign-off
+- Receipt footer: *"Known issues: you'll want another one."*
+- A **"Bug Bounty"** promo: find a flaw in her cookie, get a free one (nobody will win)
+- Holiday drop: **"Release Candidate"** limited flavor
+- Merch: a tiny bike helmet sticker that says *"Aim for the head."*
+
 ## 2. Look & feel: "modern bakery chic"
 
 **Palette** (already in `src/style.css`)
@@ -35,28 +51,46 @@
 
 **Type:** *Fraunces* (a soft, high-contrast serif; the italic is gorgeous) for headings, with *DM Sans* for body text. Both are free Google Fonts.
 
-**Logo idea:** "*Prime* C🍪okie", with the "o" as a little spinning cookie (already on the site). For packaging, a round sticker with *Primé* in italic script and a small award-ribbon shape, tying back to "award-winning."
+**Logo idea:** "*Primé* C🍪okie", with the "o" as a little spinning cookie (already on the site). For packaging, a round sticker with *Primé* in italic script and a small award-ribbon shape, tying back to "award-winning."
 
 **Packaging / IRL ideas:** kraft boxes with a cocoa-colored band, a butter-yellow sticker seal, and a "pronunciation card" in every box ("Hi, I'm Primé /pree·may/…"). Tissue paper printed with tiny cookies.
 
 ## 3. Menu naming ideas
-- **The Prime**: signature brown-butter chocolate chip with flaky salt
+- **The Primé**: signature brown-butter chocolate chip with flaky salt
 - **Swirl Royale**: cinnamon roll
 - **Bananas Foster Loaf**: banana bread
 - **Golden Hour Pound Cake**: pound cake
-- Rotating flavors: Double Chocolate Prime, Salted Toffee Crunch, Snickerdoodle Supreme, Oatmeal Brûlée, Red Velvet Cheesecake, Matcha White Chocolate
-- Bundles: **"The Prime Box"** (6), **"Award Ceremony"** (12, a mixed box), **"Crumb of the Month"** subscription
+- Rotating flavors (tech-pun names now on the site): Edge Case, Merge Conflict, Hotfix, Ctrl + Alt + Delicious, Breaking Change, Green Build
+- Bundles: **"The Primé Box"** (6), **"Award Ceremony"** (12, a mixed box), **"Crumb of the Month"** subscription
 
 ## 4. Website features to add later
 - Online pre-orders (Square Online, Shopify Buy Button or Stripe Payment Links all embed into a static GitHub Pages site)
 - Instagram feed section
 - "Find us" pop-up / farmers-market calendar
 - Gift boxes & custom-order inquiry form
-- Bite-the-cookie leaderboard (bite the 3D cookie, win a discount code)
+- Bite-the-cookie counter (bite the hero cookie 10 times, unlock a discount code)
 
 ---
 
-## 5. Nano Banana image prompts
+## 5a. ⭐ Hero image (replaces the 3D cookie)
+
+Save as **`public/images/hero.jpg`**, **1:1 square, at least 1200×1200**. It sits on the right side of the hero (above the headline on phones). The site fades its edges into the page, so **the background must be plain cream (#F7EFE3)** with the subject centered and some breathing room around it.
+
+**Option A: "The Primé" hero cookie (chic, product-first)**
+> A single thick, bakery-style brown butter chocolate chip cookie photographed from directly above, perfectly centered, with crackly golden-brown edges and glossy molten pools of dark chocolate. Flaky sea salt sparkles on top. One small bite taken out of the right edge, with a few crumbs and a couple of chocolate shards scattered artfully nearby. Plain seamless solid cream background, hex #F7EFE3, no props, no plate, no table texture. Soft, warm, diffused studio light with a gentle natural shadow. Ultra-detailed editorial food photography, minimal, modern, luxurious. Square 1:1, the subject filling about 65% of the frame and centered with even empty space all around. No text, no logos.
+
+**Option B: "Safety first" helmet cookie (fun, her helmet logic)**
+> A thick, golden chocolate chip cookie standing upright on its edge, wearing a tiny glossy butter-yellow bicycle helmet with its strap neatly buckled, photographed straight on and centered. One bite missing from the side, a few crumbs on the ground. Plain seamless solid cream background, hex #F7EFE3. Soft warm studio light, gentle shadow, hyper-realistic miniature product photography with a playful, witty, chic mood. Not cartoonish. Square 1:1, the subject centered with generous empty space around it. No text, no logos.
+
+**Option C: "Passed QA" cookie stack (nod to her tech career)**
+> A tall stack of five thick chocolate chip cookies, perfectly centered. The top cookie is broken in half, with gooey melted chocolate stretching between the halves. A small round butter-yellow sticker with a cocoa-brown check mark is stuck on the side of the stack, like an approval stamp. Floating crumbs frozen mid-air. Plain seamless solid cream background, hex #F7EFE3. Warm soft studio lighting, editorial food photography, modern and chic. Square 1:1, centered, with even empty space all around. No text.
+
+**Nano Banana tips for the hero:**
+- If the background comes out off-white or gray, follow up with: *"Change the background to a perfectly flat, solid cream color #F7EFE3, keep everything else exactly the same."*
+- If the subject is off-center: *"Recenter the cookie and leave equal empty space on all sides."*
+- Want a cutout instead? Ask for *"the same image on a pure white background,"* remove the background with a free tool (e.g. remove.bg), and save it as `hero.png`. Then change `hero.jpg` to `hero.png` in `index.html` and delete the `mask-image` lines in `.hero-art img` in `src/style.css`.
+
+## 5. Nano Banana image prompts (rest of the site)
 
 Save each image with the **exact filename** shown, into `public/images/`. The site picks them up automatically, and until a file exists the site shows a styled placeholder.
 
@@ -100,11 +134,14 @@ Tips for Nano Banana:
 > Seamless repeating pattern of tiny hand-drawn cookies, cinnamon rolls, banana slices and little award ribbons, in cocoa brown line art on a cream background, minimal, chic, flat illustration. Square tile.
 
 **Sticker / logo exploration**
-> A round sticker logo for a boutique bakery called "Primé Cookie": elegant italic serif script with a small cookie forming the letter "o", a subtle award-ribbon shape, cocoa brown on butter yellow, flat vector style, clean, modern, on a white background.
+> A round sticker logo for a boutique bakery called "Primé Cookie" (with an accent on the e): elegant italic serif script with a small cookie forming the letter "o", a subtle award-ribbon shape, cocoa brown on butter yellow, flat vector style, clean, modern, on a white background.
 > (AI tools often misspell text. Use these for ideas, then have the final logo set in real type.)
 
 **Mascot (optional, fun)**
-> A cute, minimal 3D cookie character with chocolate chip eyes and a tiny bite missing, wearing a little gold award medal, soft clay-render style, cream background, playful and chic, not childish.
+> A cute, minimal 3D cookie character with chocolate chip eyes and a tiny bite missing, wearing a little gold award medal and a tiny butter-yellow bike helmet, soft clay-render style, cream background, playful and chic, not childish.
+
+**"Founder logic" illustration (for Instagram, 4:5)**
+> Minimal flat editorial illustration: a stylish woman in a cream sweater mid-fall off a vintage bicycle, calmly diving head-first in a glossy butter-yellow helmet, holding a cookie box perfectly safe in her outstretched hands. Cocoa brown, caramel and butter-yellow palette on a cream background, witty New Yorker-cartoon energy, clean lines. 4:5 portrait. No text.
 
 ---
 

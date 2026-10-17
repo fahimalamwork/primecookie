@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prime Cookie — small-batch cookies & bakes</title>
-    <meta name="description" content="Prime Cookie (say it “pree-may”) — small-batch cookies, cinnamon rolls, banana bread and pound cake, baked fresh." />
+    <title>Primé Cookie — small-batch cookies & bakes</title>
+    <meta name="description" content="Primé Cookie (say it “pree-may”) — small-batch cookies, cinnamon rolls, banana bread and pound cake, baked fresh." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,8 +17,8 @@
     <canvas id="scene" aria-hidden="true"></canvas>
 
     <header class="nav">
-      <a href="#top" class="logo" aria-label="Prime Cookie home">
-        <span class="logo-prime">Prime</span>
+      <a href="#top" class="logo" aria-label="Primé Cookie home">
+        <span class="logo-prime">Primé</span>
         <span class="logo-cookie">C<span class="logo-o" aria-hidden="true"></span><span class="sr-only">o</span>okie</span>
       </a>
       <nav>
@@ -37,31 +37,34 @@
             Cookies worth<br />
             <em>saying right.</em>
           </h1>
-          <button class="say-it reveal" id="sayIt" type="button" aria-label="Hear how to say Prime">
-            <span class="say-word">Prime</span>
+          <button class="say-it reveal" id="sayIt" type="button" aria-label="Hear how to say Primé">
+            <span class="say-word">Primé</span>
             <span class="say-arrow">→</span>
             <span class="say-phon">/pree·may/</span>
             <span class="say-icon" aria-hidden="true">🔊</span>
           </button>
           <p class="lede reveal">
             Brown-butter cookies, gooey cinnamon rolls, banana bread and pound cake —
-            baked in tiny batches by one very serious baker.
+            baked in tiny batches by one very serious baker (and very unserious person).
           </p>
           <div class="hero-cta reveal">
             <a href="#order" class="btn">Join the first batch</a>
             <a href="#menu" class="btn btn-ghost">See the menu</a>
           </div>
         </div>
-        <p class="hint" aria-hidden="true">psst — click the cookie 🍪</p>
+        <figure class="hero-art reveal" id="heroArt">
+          <img src="images/hero.jpg" alt="A Primé Cookie chocolate chip cookie" onerror="this.remove()" />
+          <figcaption class="hint" aria-hidden="true">psst — go on, take a bite 🍪</figcaption>
+        </figure>
       </section>
 
       <!-- MARQUEE -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span>Brown butter</span><i>✦</i><span>Flaky sea salt</span><i>✦</i><span>Baked this morning</span><i>✦</i>
-          <span>Say it pree-may</span><i>✦</i><span>Gooey centers</span><i>✦</i><span>Crispy edges</span><i>✦</i>
-          <span>Brown butter</span><i>✦</i><span>Flaky sea salt</span><i>✦</i><span>Baked this morning</span><i>✦</i>
-          <span>Say it pree-may</span><i>✦</i><span>Gooey centers</span><i>✦</i><span>Crispy edges</span><i>✦</i>
+          <span>Brown butter</span><i>✦</i><span>QA-tested, every batch</span><i>✦</i><span>Say it pree-may</span><i>✦</i>
+          <span>Zero known bugs</span><i>✦</i><span>Gooey centers</span><i>✦</i><span>Tested in production</span><i>✦</i>
+          <span>Brown butter</span><i>✦</i><span>QA-tested, every batch</span><i>✦</i><span>Say it pree-may</span><i>✦</i>
+          <span>Zero known bugs</span><i>✦</i><span>Gooey centers</span><i>✦</i><span>Tested in production</span><i>✦</i>
         </div>
       </div>
 
@@ -79,7 +82,7 @@
               <span class="card-badge">Signature</span>
             </div>
             <div class="card-body">
-              <h3>The Prime</h3>
+              <h3>The Primé</h3>
               <p>Brown butter, two chocolates, flaky salt. The one that started it all.</p>
             </div>
           </article>
@@ -116,13 +119,14 @@
           </article>
         </div>
 
+        <p class="flavors-title reveal">Rotating release notes:</p>
         <ul class="flavors reveal" aria-label="Rotating cookie flavors">
-          <li>Double Chocolate Prime</li>
-          <li>Salted Toffee Crunch</li>
-          <li>Snickerdoodle Supreme</li>
-          <li>Oatmeal Brûlée</li>
-          <li>Red Velvet Cheesecake</li>
-          <li>Matcha White Chocolate</li>
+          <li title="Extra-crispy edges, soft middle">Edge Case</li>
+          <li title="Half chocolate, half vanilla">Merge Conflict</li>
+          <li title="Spicy chai snickerdoodle">Hotfix</li>
+          <li title="Double chocolate">Ctrl + Alt + Delicious</li>
+          <li title="Salted toffee crunch">Breaking Change</li>
+          <li title="Matcha white chocolate">Green Build</li>
         </ul>
       </section>
 
@@ -138,9 +142,10 @@
           <p class="eyebrow reveal">Our story</p>
           <h2 class="reveal">From one kitchen to <em>your</em> sweet tooth.</h2>
           <p class="reveal">
-            Prime Cookie started the way the best bakeries do: friends asking for “just one more batch.”
-            Every cookie is portioned by hand, rested overnight for deeper flavor, and baked until the
-            edges crackle and the middle stays soft.
+            By day, our founder is a solutions engineer. Before that she was in QA, professionally
+            finding everything that could go wrong. Turns out that's the perfect training for baking:
+            every cookie is portioned by hand, rested for deeper flavor, and tested until the edges
+            crackle and the middle stays soft. Nothing ships until it passes.
           </p>
           <p class="reveal">
             <strong>Why “Pree-may”?</strong> In French, <em>primé</em> means <em>award-winning</em>.
@@ -149,8 +154,33 @@
           <div class="stats reveal">
             <div><b>48h</b><span>dough rest</span></div>
             <div><b>100%</b><span>real butter</span></div>
-            <div><b>0</b><span>shortcuts</span></div>
+            <div><b>0</b><span>known bugs</span></div>
           </div>
+        </div>
+      </section>
+
+      <!-- FOUNDER LOGIC -->
+      <section class="section logic" id="logic">
+        <div class="section-head reveal">
+          <p class="eyebrow">Founder logic™</p>
+          <h2>Sound advice from <em>our baker.</em></h2>
+        </div>
+        <div class="logic-grid">
+          <blockquote class="logic-card reveal">
+            <span class="logic-tag">Safety tip</span>
+            <p>“If you fall off your bike, always aim to land on your <em>head</em>. That's where the helmet is.”</p>
+            <footer>Applies to cookies too: the box is protecting the cookies, so open it immediately.</footer>
+          </blockquote>
+          <blockquote class="logic-card reveal">
+            <span class="logic-tag">QA note</span>
+            <p>“It's not a bug if it's delicious. It's a feature.”</p>
+            <footer>Status: Won't fix.</footer>
+          </blockquote>
+          <blockquote class="logic-card reveal">
+            <span class="logic-tag">Solution design</span>
+            <p>“What's the problem? Doesn't matter. The solution is a cookie.”</p>
+            <footer>Proposed in every meeting, approved in most.</footer>
+          </blockquote>
         </div>
       </section>
 
@@ -176,10 +206,18 @@
       </section>
     </main>
 
+    <div class="consent" id="consent" role="dialog" aria-label="Cookie notice" hidden>
+      <p><b>This site uses cookies.</b> Obviously. Mostly chocolate chip.</p>
+      <div class="consent-actions">
+        <button class="btn btn-small" id="consentAccept" type="button">Accept all cookies</button>
+        <button class="consent-reject" id="consentReject" type="button">Reject</button>
+      </div>
+    </div>
+
     <footer class="footer">
-      <div class="footer-logo">Prime Cookie</div>
+      <div class="footer-logo">Primé Cookie</div>
       <p>Say it <em>pree-may</em>. Eat it immediately.</p>
-      <p class="small">© <span id="year"></span> Prime Cookie · Baked with love &amp; a lot of butter</p>
+      <p class="small">© <span id="year"></span> Primé Cookie · Baked with love &amp; a lot of butter</p>
     </footer>
 
     <script type="module" src="./src/main.js"></script>
