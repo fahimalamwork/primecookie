@@ -74,7 +74,7 @@ More ideas for later:
 
 ## 5a. ⭐ Hero image (replaces the 3D cookie)
 
-Save as **`public/images/hero.jpg`**, **1:1 square, at least 1200×1200**. It sits on the right side of the hero (above the headline on phones). The site fades its edges into the page, so **the background must be plain cream (#F7EFE3)** with the subject centered and some breathing room around it.
+Save as **`images/hero.jpg`**, **1:1 square, at least 1200×1200**. It sits on the right side of the hero (above the headline on phones). The site fades its edges into the page, so **the background must be plain cream (#F7EFE3)** with the subject centered and some breathing room around it.
 
 **Option A: "The Primé" hero cookie (chic, product-first)**
 > A single thick, bakery-style brown butter chocolate chip cookie photographed from directly above, perfectly centered, with crackly golden-brown edges and glossy molten pools of dark chocolate. Flaky sea salt sparkles on top. One small bite taken out of the right edge, with a few crumbs and a couple of chocolate shards scattered artfully nearby. Plain seamless solid cream background, hex #F7EFE3, no props, no plate, no table texture. Soft, warm, diffused studio light with a gentle natural shadow. Ultra-detailed editorial food photography, minimal, modern, luxurious. Square 1:1, the subject filling about 65% of the frame and centered with even empty space all around. No text, no logos.
@@ -92,7 +92,7 @@ Save as **`public/images/hero.jpg`**, **1:1 square, at least 1200×1200**. It si
 
 ✅ **Done:** the helmet cookie (Option B) is live as the hero. The original is in `art/originals/hero-helmet-cookie.jpg`; the link preview and phone icon were made from it too.
 
-## 5b. Flavor previews (1:1 square, `public/images/flavor-*.jpg`)
+## 5b. Flavor previews (1:1 square, `images/flavor-*.jpg`)
 
 These show when someone hovers over or taps a flavor chip. Use one prompt and swap in [COOKIE]:
 > A single thick bakery-style [COOKIE] photographed from directly above, centered, on a plain seamless cream background (#F7EFE3). Soft warm studio light, gentle shadow, editorial food photography, minimal and chic. Square 1:1. No text.
@@ -108,7 +108,7 @@ These show when someone hovers over or taps a flavor chip. Use one prompt and sw
 
 Tip: attach the hero photo and add *"Match the lighting and background color of this image"* so they all look like one set.
 
-## 5c. Founder logic™ card art (1:1, `public/images/logic-*.png`)
+## 5c. Founder logic™ card art (1:1, `images/logic-*.png`)
 
 > Minimal flat sticker illustration, cocoa brown line art with butter-yellow and caramel accents on a plain cream background (#F7EFE3), witty and chic, clean lines. Square. No text. [SCENE]
 
@@ -126,7 +126,7 @@ Both were made from the hero photo, so they're done. If you want dedicated versi
 
 ## 5. Nano Banana image prompts (rest of the site)
 
-Save each image with the **exact filename** shown, into `public/images/`. The site picks them up automatically, and until a file exists the site shows a styled placeholder.
+Save each image with the **exact filename** shown, into `images/`. The site picks them up automatically, and until a file exists the site shows a styled placeholder.
 
 Tips for Nano Banana:
 - Generate several and pick the best. Then **edit conversationally** ("make the chocolate meltier", "warmer light", "remove the spoon").
@@ -181,7 +181,7 @@ Tips for Nano Banana:
 
 ## 6. AI video prompts
 
-Put the main clip at `public/video/story.mp4` (it plays muted and looping in the Story section). Keep it **5–10 seconds, under ~8 MB, 4:5 or 9:16**, and design it to loop seamlessly. The best way: start from one of the Nano Banana stills above and animate it (image-to-video) with whichever video model you use (e.g. Veo).
+Put the main clip at `video/story.mp4` (it plays muted and looping in the Story section). Keep it **5–10 seconds, under ~8 MB, 4:5 or 9:16**, and design it to loop seamlessly. The best way: start from one of the Nano Banana stills above and animate it (image-to-video) with whichever video model you use (e.g. Veo).
 
 **`story.mp4`: dough to cookie**
 > Slow-motion macro shot: hands gently press a ball of cookie dough studded with chocolate chunks onto parchment, then a pinch of flaky sea salt falls onto it in slow motion. Warm window light, cream tones, shallow depth of field. Smooth, calm camera push-in. Seamless loop.

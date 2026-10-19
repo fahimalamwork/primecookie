@@ -1,4 +1,3 @@
-import "./style.css";
 import { initScene } from "./scene.js";
 
 // Waitlist: GitHub Pages is static, so submissions go to a free form service.

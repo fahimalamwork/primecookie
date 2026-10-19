@@ -25,6 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <canvas id="scene" aria-hidden="true"></canvas>
@@ -272,6 +273,11 @@
       <p class="small">© <span id="year"></span> Primé Cookie · Baked with love &amp; a lot of butter</p>
     </footer>
 
+    <!-- Lets the page run straight from the repo (GitHub Pages "Deploy from a branch") with no build step.
+         Vite bundles three from node_modules for `npm run dev` / `npm run build`. -->
+    <script type="importmap">
+      { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js" } }
+    </script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
