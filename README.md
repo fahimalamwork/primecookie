@@ -33,12 +33,10 @@ Drop files into `images/` (and `video/`) with these names (prompts for each are 
 | `images/menu-pound-cake.jpg` | Menu card: Golden Hour Pound Cake |
 | `images/story-baker.jpg` | Story section photo / video poster |
 | `video/story.mp4` | Story section looping video (optional) |
-| `images/flavor-edge-case.jpg` | Flavor preview: Edge Case (square) |
-| `images/flavor-merge-conflict.jpg` | Flavor preview: Merge Conflict |
-| `images/flavor-hotfix.jpg` | Flavor preview: Hotfix |
-| `images/flavor-ctrl-alt-delicious.jpg` | Flavor preview: Ctrl + Alt + Delicious |
-| `images/flavor-breaking-change.jpg` | Flavor preview: Breaking Change |
-| `images/flavor-green-build.jpg` | Flavor preview: Green Build |
+| `images/flavor-strawberry-white-chocolate.jpg` | Flavor preview: Strawberry White Chocolate (square) |
+| `images/flavor-banana-pudding.jpg` | Flavor preview: Banana Pudding |
+| `images/flavor-butter-pecan.jpg` | Flavor preview: Butter Pecan |
+| `images/flavor-carrot-cake.jpg` | Flavor preview: Carrot Cake |
 | `images/logic-helmet.png` | Founder logic card art: helmet |
 | `images/logic-broken.png` | Founder logic card art: broken cookie |
 | `images/logic-solution.png` | Founder logic card art: laptop |

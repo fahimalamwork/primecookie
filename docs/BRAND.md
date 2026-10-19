@@ -24,7 +24,6 @@
 ## 1b. The founder's personality is the brand
 
 She's funny, witty and lovable, and she works in tech as a solutions engineer. Lean into it; that's what makes a bakery memorable. Already on the site:
-- **Flavor names as tech puns:** *Edge Case* (extra-crispy edges), *Merge Conflict* (half chocolate, half vanilla), *Hotfix* (spicy chai snickerdoodle), *Ctrl + Alt + Delicious*, *Breaking Change*, *Green Build* (matcha)
 - **Founder logic™** quotes, including her helmet theory: *"If you fall off your bike, always aim to land on your head. That's where the helmet is."*
 - **A parody cookie-consent banner:** "This site uses cookies. Obviously." The Reject button runs away.
 - Founder logic™ nutrition fact: *"Broken cookies have no calories. They all fall out."*
@@ -59,7 +58,7 @@ More ideas for later:
 - **Swirl Royale**: cinnamon roll
 - **Bananas Foster Loaf**: banana bread
 - **Golden Hour Pound Cake**: pound cake
-- Rotating flavors (tech-pun names now on the site): Edge Case, Merge Conflict, Hotfix, Ctrl + Alt + Delicious, Breaking Change, Green Build
+- Flavors on the site: Strawberry White Chocolate, Banana Pudding, Butter Pecan, Carrot Cake
 - Bundles: **"The Primé Box"** (6), **"Award Ceremony"** (12, a mixed box), **"Crumb of the Month"** subscription
 
 ## 4. Website features to add later
@@ -98,12 +97,10 @@ These show when someone hovers over or taps a flavor chip. Use one prompt and sw
 
 | File | [COOKIE] |
 |---|---|
-| `flavor-edge-case.jpg` | chocolate chip cookie with extra-wide, deeply caramelized, crispy lace edges and a soft gooey center |
-| `flavor-merge-conflict.jpg` | cookie that is exactly half dark chocolate dough and half vanilla dough, swirled together down the middle |
-| `flavor-hotfix.jpg` | chai-spiced snickerdoodle rolled in cinnamon sugar, with a few cardamom pods and a cinnamon stick beside it |
-| `flavor-ctrl-alt-delicious.jpg` | very dark double-chocolate cookie with a glossy crackled top and molten chocolate chunks |
-| `flavor-breaking-change.jpg` | salted toffee cookie snapped in half, with shards of amber toffee and flaky salt |
-| `flavor-green-build.jpg` | vibrant matcha green cookie studded with white chocolate chunks, a light dusting of matcha powder |
+| `flavor-strawberry-white-chocolate.jpg` | pink-tinged strawberry cookie studded with creamy white chocolate chunks and bits of freeze-dried strawberry, a halved fresh strawberry beside it |
+| `flavor-banana-pudding.jpg` | soft banana pudding cookie with crushed vanilla wafer pieces pressed on top, a creamy pudding-like center, and a few banana slices and a vanilla wafer beside it |
+| `flavor-butter-pecan.jpg` | golden brown-butter cookie loaded with toasted pecan halves, with glossy caramelized edges and a few whole pecans beside it |
+| `flavor-carrot-cake.jpg` | spiced carrot cake cookie flecked with shredded carrot, topped with a swirl of cream cheese frosting and a sprinkle of chopped walnuts and cinnamon |
 
 Tip: attach the hero photo and add *"Match the lighting and background color of this image"* so they all look like one set.
 
