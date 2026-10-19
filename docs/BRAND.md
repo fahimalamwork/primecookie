@@ -23,17 +23,16 @@
 
 ## 1b. The founder's personality is the brand
 
-She's funny, witty and lovable, and she works in tech (QA → solutions engineer). Lean into it; that's what makes a bakery memorable. Already on the site:
+She's funny, witty and lovable, and she works in tech as a solutions engineer. Lean into it; that's what makes a bakery memorable. Already on the site:
 - **Flavor names as tech puns:** *Edge Case* (extra-crispy edges), *Merge Conflict* (half chocolate, half vanilla), *Hotfix* (spicy chai snickerdoodle), *Ctrl + Alt + Delicious*, *Breaking Change*, *Green Build* (matcha)
-- **"QA-tested, every batch" / "Zero known bugs" / "Tested in production"** in the marquee and stats
 - **Founder logic™** quotes, including her helmet theory: *"If you fall off your bike, always aim to land on your head. That's where the helmet is."*
 - **A parody cookie-consent banner:** "This site uses cookies. Obviously." The Reject button runs away.
-- Bite bubbles say things like "LGTM 🍪" and "test passed ✓"
+- Founder logic™ nutrition fact: *"Broken cookies have no calories. They all fall out."*
+- Bite bubbles say things like "LGTM 🍪" and "worth it"
 
 More ideas for later:
-- Box sticker: **"Passed QA ✓"** with her initials, like a code review sign-off
+- Box sticker: a little gold award ribbon that says **"Primé"**, tying back to "award-winning"
 - Receipt footer: *"Known issues: you'll want another one."*
-- A **"Bug Bounty"** promo: find a flaw in her cookie, get a free one (nobody will win)
 - Holiday drop: **"Release Candidate"** limited flavor
 - Merch: a tiny bike helmet sticker that says *"Aim for the head."*
 
@@ -82,8 +81,8 @@ Save as **`images/hero.jpg`**, **1:1 square, at least 1200×1200**. It sits on t
 **Option B: "Safety first" helmet cookie (fun, her helmet logic)**
 > A thick, golden chocolate chip cookie standing upright on its edge, wearing a tiny glossy butter-yellow bicycle helmet with its strap neatly buckled, photographed straight on and centered. One bite missing from the side, a few crumbs on the ground. Plain seamless solid cream background, hex #F7EFE3. Soft warm studio light, gentle shadow, hyper-realistic miniature product photography with a playful, witty, chic mood. Not cartoonish. Square 1:1, the subject centered with generous empty space around it. No text, no logos.
 
-**Option C: "Passed QA" cookie stack (nod to her tech career)**
-> A tall stack of five thick chocolate chip cookies, perfectly centered. The top cookie is broken in half, with gooey melted chocolate stretching between the halves. A small round butter-yellow sticker with a cocoa-brown check mark is stuck on the side of the stack, like an approval stamp. Floating crumbs frozen mid-air. Plain seamless solid cream background, hex #F7EFE3. Warm soft studio lighting, editorial food photography, modern and chic. Square 1:1, centered, with even empty space all around. No text.
+**Option C: "Award-winning" cookie stack (nod to primé = award-winning)**
+> A tall stack of five thick chocolate chip cookies, perfectly centered. The top cookie is broken in half, with gooey melted chocolate stretching between the halves. A small gold award-ribbon rosette leans against the side of the stack. Floating crumbs frozen mid-air. Plain seamless solid cream background, hex #F7EFE3. Warm soft studio lighting, editorial food photography, modern and chic. Square 1:1, centered, with even empty space all around. No text.
 
 **Nano Banana tips for the hero:**
 - If the background comes out off-white or gray, follow up with: *"Change the background to a perfectly flat, solid cream color #F7EFE3, keep everything else exactly the same."*
@@ -115,7 +114,7 @@ Tip: attach the hero photo and add *"Match the lighting and background color of 
 | File | [SCENE] |
 |---|---|
 | `logic-helmet.png` | a cookie in a tiny bike helmet confidently diving head-first, little motion lines behind it |
-| `logic-bug.png` | a cute ladybug happily eating a cookie crumb, with a small gold star next to it |
+| `logic-broken.png` | a cookie snapped in half with tiny cartoon calorie numbers tumbling out of the break like crumbs |
 | `logic-solution.png` | a laptop with a cookie on the screen where a chart would be, and a coffee mug beside it |
 
 ## 5d. Link preview & phone icon (optional upgrades)

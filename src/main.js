@@ -6,7 +6,7 @@ import { initScene } from "./scene.js";
 const FORM_ENDPOINT = "";
 const FALLBACK_EMAIL = "hello@primecookie.com";
 
-const NOMS = ["nom!", "crunch!", "mmm…", "one more?", "chomp!", "test passed ✓", "pree-may!", "LGTM 🍪"];
+const NOMS = ["nom!", "crunch!", "mmm…", "one more?", "chomp!", "worth it", "pree-may!", "LGTM 🍪"];
 
 function nomBubble(x, y) {
   const el = document.createElement("span");

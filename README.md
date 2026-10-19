@@ -40,7 +40,7 @@ Drop files into `images/` (and `video/`) with these names (prompts for each are 
 | `images/flavor-breaking-change.jpg` | Flavor preview: Breaking Change |
 | `images/flavor-green-build.jpg` | Flavor preview: Green Build |
 | `images/logic-helmet.png` | Founder logic card art: helmet |
-| `images/logic-bug.png` | Founder logic card art: bug |
+| `images/logic-broken.png` | Founder logic card art: broken cookie |
 | `images/logic-solution.png` | Founder logic card art: laptop |
 
 Full-size originals (like the helmet cookie photo) live in `art/originals/`, which isn't deployed.
