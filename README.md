@@ -9,6 +9,19 @@ A static site built with [Vite](https://vite.dev) and [three.js](https://threejs
 - Mobile-friendly, with support for `prefers-reduced-motion`.
 
 Brand brainstorm + **Nano Banana image prompts & video prompts:** see [`docs/BRAND.md`](docs/BRAND.md).
+Pages, copy tone and ideas for future pages: see [`docs/PAGES.md`](docs/PAGES.md).
+
+## Pages
+
+| Page | File |
+|---|---|
+| Home | `index.html` |
+| Menu | `menu/index.html` |
+| Story | `story/index.html` |
+| Order & FAQ | `order/index.html` |
+| Not found | `404.html` |
+
+The header, phone menu, footer and cookie banner come from `src/layout.js`, so they're edited in one place. To add a page, copy a folder like `story/`, change its `<main>`, and add it to `PAGES` in `src/layout.js` (and to `vite.config.js` for the local build).
 
 ## Run locally
 

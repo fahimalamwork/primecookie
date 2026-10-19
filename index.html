@@ -27,21 +27,7 @@
     />
     <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body>
-    <canvas id="scene" aria-hidden="true"></canvas>
-
-    <header class="nav">
-      <a href="#top" class="logo" aria-label="Primé Cookie home">
-        <span class="logo-prime">Primé</span>
-        <span class="logo-cookie">C<span class="logo-o" aria-hidden="true"></span><span class="sr-only">o</span>okie</span>
-      </a>
-      <nav>
-        <a href="#menu">Menu</a>
-        <a href="#story">Story</a>
-        <a href="#order" class="btn btn-small">Order</a>
-      </nav>
-    </header>
-
+  <body data-page="home">
     <main id="top">
       <!-- HERO -->
       <section class="hero">
@@ -51,7 +37,7 @@
             Cookies worth<br />
             <em>saying right.</em>
           </h1>
-          <button class="say-it reveal" id="sayIt" type="button" aria-label="Hear how to say Primé">
+          <button class="say-it reveal" type="button" aria-label="Hear how to say Primé">
             <span class="say-word">Primé</span>
             <span class="say-arrow">→</span>
             <span class="say-phon">/pree·may/</span>
@@ -62,8 +48,8 @@
             baked in tiny batches by one very serious baker (and very unserious person).
           </p>
           <div class="hero-cta reveal">
-            <a href="#order" class="btn">Join the first batch</a>
-            <a href="#menu" class="btn btn-ghost">See the menu</a>
+            <a href="order/" class="btn">Join the first batch</a>
+            <a href="menu/" class="btn btn-ghost">See the menu</a>
           </div>
         </div>
         <figure class="hero-art reveal" id="heroArt">
@@ -82,15 +68,18 @@
         </div>
       </div>
 
-      <!-- MENU -->
-      <section class="section menu" id="menu">
-        <div class="section-head reveal">
-          <p class="eyebrow">The menu</p>
-          <h2>Fresh out of the <em>oven</em></h2>
+      <!-- MENU PREVIEW -->
+      <section class="section menu">
+        <div class="section-head section-head-row reveal">
+          <div>
+            <p class="eyebrow">The menu</p>
+            <h2>Fresh out of the <em>oven</em></h2>
+          </div>
+          <a href="menu/" class="link-arrow">See the full menu</a>
         </div>
 
         <div class="cards">
-          <article class="card tilt reveal" style="--tone: #e9b872">
+          <a href="menu/" class="card tilt reveal" style="--tone: #e9b872">
             <div class="card-media">
               <img src="images/menu-classic.jpg" alt="Brown butter chocolate chip cookie" loading="lazy" onerror="this.remove()" />
               <span class="card-badge">Signature</span>
@@ -99,9 +88,9 @@
               <h3>The Primé</h3>
               <p>Brown butter, two chocolates, flaky salt. The one that started it all.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="card tilt reveal" style="--tone: #c98a5a">
+          <a href="menu/" class="card tilt reveal" style="--tone: #c98a5a">
             <div class="card-media">
               <img src="images/menu-cinnamon-roll.jpg" alt="Cinnamon roll with cream cheese icing" loading="lazy" onerror="this.remove()" />
               <span class="card-badge">Weekends</span>
@@ -110,9 +99,9 @@
               <h3>Swirl Royale</h3>
               <p>Pillowy cinnamon rolls under a thick blanket of cream-cheese icing.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="card tilt reveal" style="--tone: #d7a35b">
+          <a href="menu/" class="card tilt reveal" style="--tone: #d7a35b">
             <div class="card-media">
               <img src="images/menu-banana-bread.jpg" alt="Sliced banana bread loaf" loading="lazy" onerror="this.remove()" />
             </div>
@@ -120,9 +109,9 @@
               <h3>Bananas Foster Loaf</h3>
               <p>Caramelized banana bread with a crackly brown-sugar top.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="card tilt reveal" style="--tone: #f0d08a">
+          <a href="menu/" class="card tilt reveal" style="--tone: #f0d08a">
             <div class="card-media">
               <img src="images/menu-pound-cake.jpg" alt="Golden pound cake slice" loading="lazy" onerror="this.remove()" />
             </div>
@@ -130,7 +119,7 @@
               <h3>Golden Hour Pound Cake</h3>
               <p>Dense, buttery, vanilla-bean — the slice your grandma would approve.</p>
             </div>
-          </article>
+          </a>
         </div>
 
         <p class="flavors-title reveal">More flavors in the oven:</p>
@@ -166,8 +155,8 @@
         </ul>
       </section>
 
-      <!-- STORY -->
-      <section class="section story" id="story">
+      <!-- STORY TEASER -->
+      <section class="section story">
         <div class="story-media reveal">
           <video id="storyVideo" autoplay muted loop playsinline poster="images/story-baker.jpg" preload="none">
             <source src="video/story.mp4" type="video/mp4" />
@@ -179,51 +168,34 @@
           <h2 class="reveal">From one kitchen to <em>your</em> sweet tooth.</h2>
           <p class="reveal">
             By day, our founder is a solutions engineer, which means she solves problems for a living.
-            Her favorite solution is brown butter. Every cookie is portioned by hand, rested for deeper
-            flavor, and baked until the edges crackle and the middle stays soft.
+            Her favorite solution is brown butter.
           </p>
           <p class="reveal">
             <strong>Why “Pree-may”?</strong> In French, <em>primé</em> means <em>award-winning</em>.
             We think every cookie should earn the title.
           </p>
-          <div class="stats reveal">
-            <div><b>48h</b><span>dough rest</span></div>
-            <div><b>100%</b><span>real butter</span></div>
-            <div><b>0</b><span>shortcuts</span></div>
-          </div>
+          <a href="story/" class="link-arrow reveal">Read the whole story</a>
         </div>
       </section>
 
-      <!-- FOUNDER LOGIC -->
-      <section class="section logic" id="logic">
-        <div class="section-head reveal">
-          <p class="eyebrow">Founder logic™</p>
-          <h2>Sound advice from <em>our baker.</em></h2>
-        </div>
-        <div class="logic-grid">
-          <blockquote class="logic-card reveal">
-            <img class="logic-art" src="images/logic-helmet.png" alt="A cookie in a tiny bike helmet diving head-first" loading="lazy" onerror="this.remove()" />
-            <span class="logic-tag">Safety tip</span>
-            <p>“If you fall off your bike, always aim to land on your <em>head</em>. That's where the helmet is.”</p>
-            <footer>Applies to cookies too: the box is protecting the cookies, so open it immediately.</footer>
-          </blockquote>
-          <blockquote class="logic-card reveal">
-            <img class="logic-art" src="images/logic-broken.png" alt="A cookie broken in half with calories spilling out" loading="lazy" onerror="this.remove()" />
-            <span class="logic-tag">Nutrition fact</span>
-            <p>“Broken cookies have no calories. They all fall out.”</p>
-            <footer>That's why ours come with a bite already taken.</footer>
-          </blockquote>
-          <blockquote class="logic-card reveal">
-            <img class="logic-art" src="images/logic-solution.png" alt="A laptop showing a cookie instead of a chart" loading="lazy" onerror="this.remove()" />
-            <span class="logic-tag">Solution design</span>
-            <p>“What's the problem? Doesn't matter. The solution is a cookie.”</p>
-            <footer>Proposed in every meeting, approved in most.</footer>
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- ORDER / WAITLIST -->
-      <section class="section order" id="order">
+      <!--         <div class="order-card reveal">
+          <p class="eyebrow">Be first in line</p>
+          <h2>Get on the <em>first batch</em> list.</h2>
+          <p>Launch dates, pop-ups and pre-orders — straight to your inbox. No spam, only crumbs.</p>
+          <form name="waitlist" id="waitlist">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            <select name="favorite" aria-label="What are you most excited for?">
+              <option value="cookies">🍪 Cookies</option>
+              <option value="cinnamon-rolls">🌀 Cinnamon rolls</option>
+              <option value="banana-bread">🍌 Banana bread</option>
+              <option value="pound-cake">🍰 Pound cake</option>
+            </select>
+            <button class="btn" type="submit">Count me in</button>
+          </form>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </div> -->
+      <section class="section order">
         <div class="order-card reveal">
           <p class="eyebrow">Be first in line</p>
           <h2>Get on the <em>first batch</em> list.</h2>
@@ -243,20 +215,6 @@
         </div>
       </section>
     </main>
-
-    <div class="consent" id="consent" role="dialog" aria-label="Cookie notice" hidden>
-      <p><b>This site uses cookies.</b> Obviously. Mostly chocolate chip.</p>
-      <div class="consent-actions">
-        <button class="btn btn-small" id="consentAccept" type="button">Accept all cookies</button>
-        <button class="consent-reject" id="consentReject" type="button">Reject</button>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <div class="footer-logo">Primé Cookie</div>
-      <p>Say it <em>pree-may</em>. Eat it immediately.</p>
-      <p class="small">© <span id="year"></span> Primé Cookie · Baked with love &amp; a lot of butter</p>
-    </footer>
 
     <!-- Lets the page run straight from the repo (GitHub Pages "Deploy from a branch") with no build step.
          Vite bundles three from node_modules for `npm run dev` / `npm run build`. -->

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order — Primé Cookie</title>
+    <meta name="description" content="Join the Primé Cookie list for launch dates, pop-ups and pre-orders. Custom orders welcome." />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#F7EFE3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Primé Cookie" />
+    <meta property="og:title" content="Order — Primé Cookie" />
+    <meta property="og:description" content="Join the Primé Cookie list for launch dates, pop-ups and pre-orders. Custom orders welcome." />
+    <meta property="og:url" content="https://fahimalamwork.github.io/primecookie/order/" />
+    <meta property="og:image" content="https://fahimalamwork.github.io/primecookie/images/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+  </head>
+  <body data-page="order">
+    <main>
+      <header class="page-head">
+        <p class="eyebrow reveal">Order</p>
+        <h1 class="reveal">Be first in <em>line.</em></h1>
+        <p class="lede reveal">We're not taking orders just yet, but the oven is warming up. Here's how it'll work.</p>
+      </header>
+
+      <section class="section how">
+        <ol class="steps steps-3">
+          <li class="reveal"><h3>Pick a box</h3><p>Choose your size and mix your flavors.</p></li>
+          <li class="reveal"><h3>Choose a slot</h3><p>Pickup or local delivery, on the day you want.</p></li>
+          <li class="reveal"><h3>Enjoy</h3><p>Ideally not all at once. No judgment if so.</p></li>
+        </ol>
+      </section>
+
+      <section class="section order">
+        <div class="order-card reveal">
+          <p class="eyebrow">Be first in line</p>
+          <h2>Get on the <em>first batch</em> list.</h2>
+          <p>Launch dates, pop-ups and pre-orders — straight to your inbox. No spam, only crumbs.</p>
+          <form name="waitlist" id="waitlist">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            <select name="favorite" aria-label="What are you most excited for?">
+              <option value="cookies">🍪 Cookies</option>
+              <option value="cinnamon-rolls">🌀 Cinnamon rolls</option>
+              <option value="banana-bread">🍌 Banana bread</option>
+              <option value="pound-cake">🍰 Pound cake</option>
+            </select>
+            <button class="btn" type="submit">Count me in</button>
+          </form>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </div>
+      </section>
+
+      <section class="section custom">
+        <div class="custom-card reveal">
+          <div>
+            <p class="eyebrow">Custom orders &amp; events</p>
+            <h2>Something <em>special?</em></h2>
+            <p>Birthdays, showers, office treats, client gifts. Tell us the occasion and we'll build a box around it.</p>
+          </div>
+          <a class="btn" data-email="Custom order" href="#">Email us</a>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Good <em>questions.</em></h2>
+        </div>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>When do you launch?</summary>
+            <p>Soon. Join the list above and you'll hear first, along with pop-up dates and pre-orders.</p>
+          </details>
+          <details class="reveal">
+            <summary>How do I order?</summary>
+            <p>At launch you'll be able to pre-order a box online and pick a pickup or local delivery slot. Details are coming soon.</p>
+          </details>
+          <details class="reveal">
+            <summary>Do you take custom orders?</summary>
+            <p>Yes, with a little notice. Birthdays, office treats, thank-yous, or a Tuesday. <a data-email="Custom order" href="#"></a></p>
+          </details>
+          <details class="reveal">
+            <summary>How long do the cookies stay fresh?</summary>
+            <p>Several days in an airtight container. In our experience, they rarely get the chance.</p>
+          </details>
+          <details class="reveal">
+            <summary>Can I freeze them?</summary>
+            <p>Yes. Wrap them well, then warm one in the oven for a few minutes and it's nearly fresh-baked.</p>
+          </details>
+          <details class="reveal">
+            <summary>What about allergies?</summary>
+            <p>Our kitchen handles wheat, dairy, eggs and tree nuts, so we can't promise anything is allergen-free. Ask us about specific needs.</p>
+          </details>
+          <details class="reveal">
+            <summary>Is it “prime” or “pree-may”?</summary>
+            <p>Pree-may. <em>Primé</em> is French for award-winning. But we'll answer to anything if you're ordering.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <!-- Runs straight from the repo (GitHub Pages "Deploy from a branch"); see index.html. -->
+    <script type="importmap">
+      { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js" } }
+    </script>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
