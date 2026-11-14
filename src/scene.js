@@ -30,7 +30,7 @@ export function initScene(canvas) {
   dustGeo.setAttribute("position", new THREE.BufferAttribute(dustPos, 3));
   const dust = new THREE.Points(
     dustGeo,
-    new THREE.PointsMaterial({ color: "#c98a4a", size: 0.05, transparent: true, opacity: 0.55, depthWrite: false }),
+    new THREE.PointsMaterial({ color: "#8a4f22", size: 0.05, transparent: true, opacity: 0.55, depthWrite: false }),
   );
   dust.frustumCulled = false;
   scene.add(dust);

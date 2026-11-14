@@ -35,19 +35,21 @@ More ideas for later:
 - Holiday drop: **"Release Candidate"** limited flavor
 - Merch: a tiny bike helmet sticker that says *"Aim for the head."*
 
-## 2. Look & feel: "modern bakery chic"
+## 2. Look & feel: "Sticker Pack"
 
-**Palette** (already in `src/style.css`)
+Loud, playful and a little unserious, like the founder. Everything looks like a sticker: thick cocoa outlines, hard drop shadows, slightly tilted cards, and big uppercase headlines with one word highlighted in pink.
+
+**Palette** (in `src/style.css`)
 | Token | Hex | Use |
 |---|---|---|
-| Cream | `#F7EFE3` | background, the "paper" |
-| Oat | `#EFE2CF` | section backgrounds |
-| Cocoa | `#2E1B12` | text, buttons, the main dark |
-| Caramel | `#C9803F` | accents, italic words |
-| Butter | `#F2C66D` | highlights, the "say it" button |
-| Strawberry | `#E8577E` | badges, small pops |
+| Butter | `#F6C956` | the page background |
+| Cream | `#FFF6E6` | cards, nav, inputs (the "sticker paper") |
+| Cocoa | `#2A160D` | text, outlines, shadows, dark blocks |
+| Strawberry | `#E8577E` | highlighted words, feature cards, the 404 page |
 
-**Type:** *Fraunces* (a soft, high-contrast serif; the italic is gorgeous) for headings, with *DM Sans* for body text. Both are free Google Fonts.
+Text on strawberry is always cocoa (white doesn't have enough contrast).
+
+**Type:** *Bricolage Grotesque* for everything; weight 800 and uppercase for headlines. A free Google Font.
 
 **Logo idea:** "*Primé* C🍪okie", with the "o" as a little spinning cookie (already on the site). For packaging, a round sticker with *Primé* in italic script and a small award-ribbon shape, tying back to "award-winning."
 
