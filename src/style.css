@@ -256,7 +256,10 @@ a.card { display: block; color: inherit; text-decoration: none; }
 }
 .steps h3 { font-size: 1.4rem; }
 .steps p { margin: 0; }
-.how { padding-top: clamp(48px, 6vw, 80px); padding-bottom: 0; }
+.how { padding-top: 0; }
+.page-head + .order { padding-top: clamp(40px, 6vw, 72px); }
+.where { margin: 0; font-weight: 700; }
+[hidden] { display: none !important; }
 .cta-band { text-align: center; }
 .cta-band .hero-cta { justify-content: center; }
 
@@ -314,7 +317,12 @@ body[data-page="404"] { background: var(--berry); }
   background: var(--cocoa); color: var(--cream); border: 3px solid var(--cream); border-radius: 22px; padding: 18px 20px;
   box-shadow: 6px 6px 0 var(--berry); animation: slideUp 0.5s cubic-bezier(0.2, 1.4, 0.4, 1);
 }
-.consent p { margin: 0 0 12px; }
+.consent p { margin: 0 44px 12px 0; }
+.consent-close {
+  position: absolute; top: 4px; right: 4px; width: 44px; height: 44px; border: 0; border-radius: 50%;
+  background: none; color: var(--cream); font: 800 1.6rem/1 var(--sans); cursor: pointer;
+}
+.consent-close:hover { color: var(--butter); }
 .consent-actions { display: flex; gap: 12px; align-items: center; }
 .consent .btn { background: var(--butter); color: var(--cocoa); border-color: var(--butter); }
 .consent-reject { background: none; border: 0; color: var(--cream); font: 600 0.95rem var(--sans); cursor: pointer; text-decoration: underline; transition: transform 0.2s; }

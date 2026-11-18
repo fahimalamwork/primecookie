@@ -4,6 +4,9 @@
 const BASE = new URL("../", import.meta.url).href;
 export const url = (path = "") => BASE + path;
 
+// Where you bake and deliver, e.g. "Austin, TX". Left empty, the "where" lines stay hidden.
+const AREA = "";
+
 const PAGES = [
   ["", "Home"],
   ["menu/", "Menu"],
@@ -45,11 +48,13 @@ const footer = `
       ${PAGES.map(([path, label]) => `<a href="${url(path)}">${label}</a>`).join("")}
     </nav>
     <p>Say it <em>pree-may</em>. Eat it immediately.</p>
+    <p data-area hidden></p>
     <p class="small">© ${new Date().getFullYear()} Primé Cookie · Baked with love &amp; a lot of butter</p>
   </footer>`;
 
 const consent = `
   <div class="consent" id="consent" role="dialog" aria-label="Cookie notice" hidden>
+    <button class="consent-close" id="consentClose" type="button" aria-label="Close cookie notice">×</button>
     <p><b>This site uses cookies.</b> Obviously. Mostly chocolate chip.</p>
     <div class="consent-actions">
       <button class="btn btn-small" id="consentAccept" type="button">Accept all cookies</button>
@@ -59,6 +64,14 @@ const consent = `
 
 document.body.insertAdjacentHTML("afterbegin", `<canvas id="scene" aria-hidden="true"></canvas>${header}`);
 document.body.insertAdjacentHTML("beforeend", footer + consent);
+
+// "Where" lines: any element marked data-area is filled in once AREA is set above
+if (AREA) {
+  document.querySelectorAll("[data-area]").forEach((el) => {
+    el.textContent = `Pickup and local delivery in ${AREA}.`;
+    el.hidden = false;
+  });
+}
 
 // Mobile menu
 const toggle = document.querySelector(".nav-toggle");
