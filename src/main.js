@@ -128,12 +128,16 @@ if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const data = new FormData(form);
+    const button = form.querySelector("button[type=submit]");
     if (!FORM_ENDPOINT) {
+      // No form service yet: hand off to the visitor's email app, and say so, so the page doesn't just seem to do nothing
+      msg.textContent = "Opening your email app with a ready-made note. Just hit send and you're on the list.";
       const body = encodeURIComponent(`Add me to the Primé Cookie list!\nEmail: ${data.get("email")}\nMost excited for: ${data.get("favorite")}`);
       window.location.href = `mailto:${FALLBACK_EMAIL}?subject=Prim%C3%A9%20Cookie%20waitlist&body=${body}`;
       return;
     }
     msg.textContent = "Mixing the dough…";
+    button.disabled = true;
     try {
       const res = await fetch(FORM_ENDPOINT, { method: "POST", body: data, headers: { Accept: "application/json" } });
       if (!res.ok) throw new Error(res.statusText);
@@ -141,6 +145,8 @@ if (form) {
       msg.textContent = "You’re on the list! Fresh cookies incoming. 🍪";
     } catch {
       msg.textContent = "Oops — the oven hiccuped. Try again in a sec?";
+    } finally {
+      button.disabled = false;
     }
   });
 }
@@ -151,14 +157,14 @@ document.querySelectorAll("[data-email]").forEach((a) => {
   if (!a.textContent.trim()) a.textContent = FALLBACK_EMAIL;
 });
 
-// "This site uses cookies" banner. Rejecting is, of course, not really an option.
+// "This site uses cookies" banner. Reject runs away for a while, then gives in; × and Escape always close it.
 const consent = document.getElementById("consent");
 const reject = document.getElementById("consentReject");
 const REJECT_LINES = ["Reject", "Are you sure?", "Really?", "Nice try 🍪", "Error 418: I'm a cookie"];
 let rejects = 0;
 let consentSeen = false;
 try {
-  consentSeen = localStorage.getItem("primeConsent") === "yes";
+  consentSeen = localStorage.getItem("primeConsent") !== null;
 } catch {}
 // Wait until they've looked around: show after some scrolling, or after a while
 if (!consentSeen) {
@@ -172,17 +178,28 @@ if (!consentSeen) {
   window.addEventListener("scroll", onFirstScroll, { passive: true });
 }
 
-const dodge = () => {
-  rejects = Math.min(rejects + 1, REJECT_LINES.length - 1);
-  reject.textContent = REJECT_LINES[rejects];
-  reject.style.transform = `translate(${(Math.random() - 0.5) * 60}px, ${-Math.random() * 30}px)`;
-};
-if (finePointer) reject.addEventListener("pointerenter", dodge);
-reject.addEventListener("click", dodge);
-document.getElementById("consentAccept").addEventListener("click", (e) => {
+const closeConsent = (answer) => {
   try {
-    localStorage.setItem("primeConsent", "yes");
+    localStorage.setItem("primeConsent", answer);
   } catch {}
-  scene?.burstAt(e.clientX, e.clientY, 30);
   consent.hidden = true;
+};
+const lastLine = () => rejects === REJECT_LINES.length - 1;
+const dodge = () => {
+  rejects += 1;
+  reject.textContent = REJECT_LINES[rejects];
+  reject.style.transform = lastLine() ? "" : `translate(${(Math.random() - 0.5) * 60}px, ${-Math.random() * 30}px)`;
+};
+if (finePointer) reject.addEventListener("pointerenter", () => lastLine() || dodge());
+reject.addEventListener("click", () => {
+  if (!lastLine()) return dodge();
+  // Out of excuses: let them win
+  reject.textContent = "Fine. You win.";
+  setTimeout(() => closeConsent("no"), 1100);
+});
+document.getElementById("consentClose").addEventListener("click", () => closeConsent("closed"));
+document.addEventListener("keydown", (e) => e.key === "Escape" && !consent.hidden && closeConsent("closed"));
+document.getElementById("consentAccept").addEventListener("click", (e) => {
+  scene?.burstAt(e.clientX, e.clientY, 30);
+  closeConsent("yes");
 });
